@@ -13,7 +13,7 @@ if ($imc < 18.5){
     echo "Você está abaixo do peso!";
 
 } elseif ($imc <= 24.9){
-    echo "peso normal";
+    echo "Peso normal";
 
 } elseif ($imc <= 29.9){
     echo "Sobrepeso";
@@ -25,8 +25,12 @@ if ($imc < 18.5){
 } elseif ($imc <= 39.9){
 
     echo "Grau 2";
-} else {
-    echo "Grau 3";
-}
 
+} elseif ($imc <= 1000) {
+    echo "Grau 3";
+    
+} else {
+    echo "Favor, preencher corretamente o formulário!";
+}
+    header("refresh:5;url=index.html");
 ?>
