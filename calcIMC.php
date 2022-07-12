@@ -2,19 +2,31 @@
 $nome = $_POST['nome'];
 $altura = $_POST['altura'];
 $peso = $_POST['peso'];
-$imc = (($peso / $altura)* $altura);
+$imc = ($peso / ($altura* $altura));
 
 echo "Seu nome é " . $nome . "</br>";
 echo "Sua altura é " . $altura . "</br>";
 echo "Seu peso é " . $peso . "</br>";
 echo "O seu IMC é " . $imc . "</br>";
 
-if ($imc <= 40) {
-    echo ("Você está abaixo do peso ideal");
-} else if($imc <= 80) {
-    echo ("Você está na média do peso ideal");
+if ($imc < 18.5){
+    echo "Você está abaixo do peso!";
+
+} elseif ($imc <= 24.9){
+    echo "peso normal";
+
+} elseif ($imc <= 29.9){
+    echo "Sobrepeso";
+
+} elseif ($imc <= 34.9){
+
+    echo "Grau l";
+
+} elseif ($imc <= 39.9){
+
+    echo "Grau 2";
 } else {
-    echo ("Você está acima do peso ideal");
+    echo "Grau 3";
 }
 
 ?>
